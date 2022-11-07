@@ -124,25 +124,4 @@ public class UserIntegrationTest {
         headers.add("Authorization", "Bearer " + responseEntity.getBody().getAccessToken());
         return headers;
     }
-
-    // @Test
-    // void createUser_WhenUserIsAdmin_ThenReturn201() throws Exception {
-    //     // Generate Headers (Authentication as Admin User)
-    //     HttpHeaders headers = generateAuthAdmin();
-
-    //     // Create a new user
-    //     URI uri = new URI(baseUrl + port + "/api/user/create");
-    //     User user = new User("testUser", "testUser@gmail.com",
-    //             encoder.encode("password"), "ROLE_USER", false);
-
-    //     // Send request
-    //     HttpEntity<User> entity = new HttpEntity<>(user, headers);
-    //     ResponseEntity<String> responseEntity = restTemplate.exchange(
-    //             uri,
-    //             HttpMethod.POST, entity, String.class);
-
-    //     // Assert
-    //     assertEquals(201, responseEntity.getStatusCodeValue());
-
-    // }
 }

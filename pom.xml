@@ -15,7 +15,7 @@
 	<description>The Green Investor - Sustainability Game</description>
 
 	<properties>
-		<java.version>17</java.version>
+		<java.version>18</java.version>
 	</properties>
 
 	<dependencies>
