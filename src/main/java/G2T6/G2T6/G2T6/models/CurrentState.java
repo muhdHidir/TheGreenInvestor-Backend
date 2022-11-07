@@ -120,7 +120,7 @@ public class CurrentState {
     public List<String> getUserAnswers() {
         if (userResponse.isEmpty())
             return null;
-        List<String> answers = Arrays.stream(userResponse.split(",")).toList();
+        List<String> answers = Arrays.stream(userResponse.split(",")).collect(Collectors.toList());
         return answers;
     }
 
