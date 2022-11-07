@@ -401,7 +401,7 @@
         {
           "Option": "Release a statement stating the company is not going to change its business practices",
           "Feedback": "Your statement has caused public outrage, and many are now avoiding your products and services",
-          "sustainbilityPts": "480",
+          "sustainbilityPts": "-480",
           "moralePts": "-20",
           "incomePts": "-20",
           "costPts": "1"

@@ -152,8 +152,8 @@ public class GameStats implements Comparable<GameStats> {
      * 
      * @return calculation
      */
-    public Long getTotal() {
-        return (long) (currentCashInHand + currentIncomeVal + currentMoraleVal) +  (3 * currentSustainabilityVal);
+    public Double getTotal() {
+        return (double) ((currentCashInHand + currentIncomeVal + currentMoraleVal) +  (3 * currentSustainabilityVal) )* getMultiplier();
     }
 
     /**
@@ -164,8 +164,8 @@ public class GameStats implements Comparable<GameStats> {
      */
     @Override
     public int compareTo(GameStats o) {
-        Long cV = getTotal();
-        Long oV = o.getTotal();
+        Double cV = getTotal();
+        Double oV = o.getTotal();
         if (cV == oV)
             return 0;
         if (cV > oV)
