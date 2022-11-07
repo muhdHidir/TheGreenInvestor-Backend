@@ -1,0 +1,29 @@
+GET http://localhost:8080/api/id/2/gameStats
+###
+DELETE http://localhost:8080/api/id/2/gameStats/17
+###
+GET http://localhost:8080/api/id/2/gameStats/5
+
+###
+POST http://localhost:8080/api/id/2/gameStats
+Content-Type: application/json
+
+{
+    "incomeVal": 0,
+    "moraleVal":0,
+    "emissionVal":0
+}
+
+###
+
+PUT http://localhost:8080/api/id/2/gameStats/18
+Content-Type: application/json
+
+{
+    "incomeVal": 10,
+    "moraleVal":0,
+    "emissionVal":0
+}
+###
+
+GET http://localhost:8080/api/gameStats/allUnique

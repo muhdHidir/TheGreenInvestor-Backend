@@ -1,0 +1,30 @@
+GET http://localhost:8080/api/id/1/states
+###
+GET http://localhost:8080/api/states
+###
+DELETE http://localhost:8080/api/states/2
+###
+GET http://localhost:8080/api/id/1
+
+###
+POST http://localhost:8080/api/id/1/states
+Content-Type: application/json
+
+{
+    "yearValue": 2,
+    "currentState": "start",
+    "questionSetId": 0,
+    "userResponse": ""
+}
+###
+PUT http://localhost:8080/api/states/2
+Content-Type: application/json
+
+{
+    "yearValue": 3,
+    "currentState": "start",
+    "questionSetId": 3,
+    "userResponse": ""
+}
+
+###

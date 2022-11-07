@@ -1,0 +1,74 @@
+
+//what i feel is anything below 0.6 can be considered wrong
+
+### 1.0
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "Using less aircon",
+   "target": "Using less aircon"
+}
+
+### 0.82
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "Use less aircon",
+   "target": "Using less aircon"
+}
+
+### 0.52
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "don't use aircon",
+   "target": "Using less aircon"
+}
+
+### 0.35
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "aircon",
+   "target": "Using less aircon"
+}
+
+### 0.647
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "less aircon",
+   "target": "Using less aircon"
+}
+
+### 0.279
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "use less aircon is not the correct decision",
+   "target": "Using less aircon"
+}
+
+### 0.307 --> limit the words to 3 for better use
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "use less aircon is the correct decision",
+   "target": "Using less aircon"
+}
+
+### 0.588
+POST http://localhost:8080/api/getSimilarity
+Content-Type: application/json
+
+{
+   "input": "use more aircon",
+   "target": "Using less aircon"
+}

@@ -1,0 +1,51 @@
+### normal sign up
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "johnTheUser3",
+    "email": "johnNotTheAdmindTest32@gmail.com",
+    "password": "password6*d123",
+    "role": "USER"
+}
+###
+
+### login
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+    "username": "johnTheUser3",
+    "password": "password6*d123"
+}
+###
+
+### get game info about this user
+GET http://localhost:8080/api/gameInfo
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjMiLCJpYXQiOjE2Njc3MTc2MzEsImV4cCI6MTY2NzcyMTIzMX0.UBDOaFE5OxAhd78uEDkTFP6pgjeRvRyt7yXXYeGwBY26M8J0TXYababKrZNtLk_nMnmH4EcvpI6cCuW2qrFdSw
+###
+
+
+### start game for current user
+POST http://localhost:8080/api/startGame
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjMiLCJpYXQiOjE2Njc3MTc2MzEsImV4cCI6MTY2NzcyMTIzMX0.UBDOaFE5OxAhd78uEDkTFP6pgjeRvRyt7yXXYeGwBY26M8J0TXYababKrZNtLk_nMnmH4EcvpI6cCuW2qrFdSw
+###
+
+
+### submit mcq answer #index from 0,1,2,3
+POST http://localhost:8080/api/submitAnswer
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjMiLCJpYXQiOjE2Njc3MTc2MzEsImV4cCI6MTY2NzcyMTIzMX0.UBDOaFE5OxAhd78uEDkTFP6pgjeRvRyt7yXXYeGwBY26M8J0TXYababKrZNtLk_nMnmH4EcvpI6cCuW2qrFdSw
+
+{
+    "answer": "2"
+}
+
+### submit open ended answer
+POST http://localhost:8080/api/submitAnswer
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjIiLCJpYXQiOjE2Njc1NTMyNDIsImV4cCI6MTY2NzU1Njg0Mn0.f-23MliT_50DF0TiQk5fVFl30YlBM09ibiRx_IDOxUfwVHTipn96edaD9a_5AcH69u4LrMQQlyPTqn7V1YywSQ
+
+{
+    "answer": "Electricity,Carbon,Water"
+}

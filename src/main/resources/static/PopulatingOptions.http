@@ -1,0 +1,105 @@
+
+###
+GET http://localhost:8080/api/questions/1/options
+###
+DELETE http://localhost:8080/api/questions/1/options/3
+
+###
+PUT http://localhost:8080/api/questions/1/options
+Content-Type: application/json
+
+{
+   "id" : 1,
+   "option" : " Implementing paperless office"
+}
+
+###
+POST http://localhost:8080/api/questions/1/options
+Content-Type: application/json
+
+{
+   "id" : 2,
+   "option" : "Use recycled printing paper"
+}
+
+###
+POST http://localhost:8080/api/questions/1/options
+Content-Type: application/json
+
+{
+   "id" : 3,
+   "option" : "Enforce double sided printing"
+}
+
+###
+POST http://localhost:8080/api/questions/1/options
+Content-Type: application/json
+
+{
+   "id" : 4,
+   "option" : "Do nothing"
+}
+
+###
+POST http://localhost:8080/api/questions/2/options
+Content-Type: application/json
+
+{
+   "option" : "Company wide celebration party"
+}
+
+###
+POST http://localhost:8080/api/questions/2/options
+Content-Type: application/json
+
+{
+   "option" : "Invest money to buy solar panels on the rooftop"
+}
+
+###
+POST http://localhost:8080/api/questions/2/options
+Content-Type: application/json
+
+{
+   "option" : "Invest in new manufacturing machinery to increase"
+}
+
+###
+POST http://localhost:8080/api/questions/2/options
+Content-Type: application/json
+
+{
+   "option" : "Do nothing"
+}
+
+###
+POST http://localhost:8080/api/questions/3/options
+Content-Type: application/json
+
+{
+   "option" : "Encourage all employees to cycle or carpool to work"
+}
+
+###
+POST http://localhost:8080/api/questions/3/options
+Content-Type: application/json
+
+{
+   "option" : "Offer only vegetarian lunch choices for a week at work"
+}
+
+###
+POST http://localhost:8080/api/questions/3/options
+Content-Type: application/json
+
+{
+   "option" : "Organize a company beach cleanup"
+}
+
+###
+POST http://localhost:8080/api/questions/3/options
+Content-Type: application/json
+
+{
+   "option" : "Do nothing"
+}

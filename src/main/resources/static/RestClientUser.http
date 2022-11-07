@@ -1,0 +1,41 @@
+### normal sign up
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+    "username": "johnTheUser3",
+    "email": "johnNotTheAdmindTest32@gmail.com",
+    "password": "password6*d123",
+    "role": "USER"
+}
+###
+
+### login
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+    "username": "johnTheUser3",
+    "password": "password6*d123"
+}
+
+###
+GET  http://localhost:8080/api/subscribedlist
+###
+
+###
+PUT  http://localhost:8080/api/subscribe
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjIiLCJpYXQiOjE2NjYwMDUxODAsImV4cCI6MTY2NjAwODc4MH0.4rn_pEkkl-23oUViLwMtzGQaRa5jApCHtGJFLyd5bsD_0EB6FbbWefw27bUGJbtt-q3eWvlB1g4nLKXJleWWXA
+###
+
+###
+GET http://localhost:8080/api/user/profileImageIndex
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjMiLCJpYXQiOjE2Njc2Mzg5MDcsImV4cCI6MTY2NzY0MjUwN30.EIVlJ9q2Dho7p_tphNu3I2BUvQyYdtvu07AyTNW_cUjy7VLD2Oom7yjGGyKikYR_CONUuT4BuASi8yhvw6mELg
+###
+
+PUT http://localhost:8080/api/user/profileImageIndex/5
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjMiLCJpYXQiOjE2Njc2Mzg5MDcsImV4cCI6MTY2NzY0MjUwN30.EIVlJ9q2Dho7p_tphNu3I2BUvQyYdtvu07AyTNW_cUjy7VLD2Oom7yjGGyKikYR_CONUuT4BuASi8yhvw6mELg
+
+###
+GET http://localhost:8080/api/user/getProfile
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huVGhlVXNlcjMiLCJpYXQiOjE2Njc3MDc3MzAsImV4cCI6MTY2NzcxMTMzMH0.Yb12fKk3rX0fsSWpICaai9Zu9ZItKmxVXrh0oLRfCzm2Z0wVbwGQccow2LhNG_uF1v1_LDvRKmnDLRnL1jn1Bg

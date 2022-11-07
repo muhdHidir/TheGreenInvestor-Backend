@@ -1,0 +1,80 @@
+GET http://localhost:8080/api/gameStats
+###
+DELETE http://localhost:8080/api/gameStats/1
+###
+GET http://localhost:8080/api/gameStats/2
+
+###
+POST http://localhost:8080/api/gameStats
+Content-Type: application/json
+
+{
+   "incomeVal": 10,
+   "moraleVal": 10,
+   "emissionVal": 10
+}
+
+###
+
+PUT http://localhost:8080/api/gameStats/2
+Content-Type: application/json
+
+{
+    "incomeVal": 10,
+    "moraleVal": 10,
+    "emissionVal": 100
+}
+
+#Question Tests
+
+###
+GET http://localhost:8080/api/questions
+###
+DELETE http://localhost:8080/api/questions/5
+###
+GET http://localhost:8080/api/questions/1
+
+###
+POST http://localhost:8080/api/questions
+Content-Type: application/json
+
+{
+   "id" : 3,
+   "question" : "It is 22 April, AKA Earth Day! Your company decide to celebrate in the following way:",
+   "imageLocation" : "../assets/img3.jpg"
+}
+
+###
+
+PUT http://localhost:8080/api/questions/1
+Content-Type: application/json
+
+{
+    "question": "yay finally"
+}
+
+
+#Option Tests
+
+###
+GET http://localhost:8080/api/questions/3/options
+###
+DELETE http://localhost:8080/api/questions/1/options/3
+
+###
+POST http://localhost:8080/api/questions/2/options
+Content-Type: application/json
+
+{
+   "id" : 4,
+   "option" : "Do nothing"
+}
+
+###
+
+PUT http://localhost:8080/api/questions/1/options/5
+Content-Type: application/json
+
+{
+    "option" : "Dog ?!?"
+}

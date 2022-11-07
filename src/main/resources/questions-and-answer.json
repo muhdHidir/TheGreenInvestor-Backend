@@ -1,0 +1,616 @@
+{
+  "QuestionList": [
+    {
+      "Question": "Company stakeholders are pressuring you to eliminate paper waste in every office. Will you:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img1.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Implementing paperless office",
+          "Feedback": "Implementing a paperless office would require additional investment into cloud security and technology. However, it will eliminate paper waste entirely and would help implement a more streamline and efficient work environment online",
+          "sustainbilityPts": "180",
+          "moralePts": "0",
+          "incomePts": "5",
+          "costPts": "20"
+        },
+        {
+          "Option": "Use recycled printing paper",
+          "Feedback": "Although recycled paper costs more, it is a great way to promote sustainably within the company",
+          "sustainbilityPts": "120",
+          "moralePts": "0",
+          "incomePts": "-5",
+          "costPts": "10"
+        },
+        {
+          "Option": "Enforce double-sided printing",
+          "Feedback": "Enforcing double-sided printing is a great way to prevent paper waste, however, some employees are annoyed by the new policy",
+          "sustainbilityPts": "120",
+          "moralePts": "-5",
+          "incomePts": "3",
+          "costPts": "5"
+        },
+        {
+          "Option": "Lie to the stakeholders",
+          "Feedback": "You decided to lie to your stakeholders that paper waste has been eliminated in the office.",
+          "sustainbilityPts": "-60",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "0"
+        },
+        {
+          "Option": "Put a limit on each employee on how much paper they can use",
+          "Feedback": "Limiting employee's paper use is one way of eliminating paper waste, however, it is counter productive to your employee's work. Morale has dropped considerably",
+          "sustainbilityPts": "60",
+          "moralePts": "-15",
+          "incomePts": "2",
+          "costPts": "0"
+        },
+        {
+          "Option": "Do nothing",
+          "Feedback": "You decided to do nothing to combat paper waste within the company",
+          "sustainbilityPts": "-60",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "The company has earned a record profit for the year. You decide to use the money for:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img2.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Company-wide celebration party",
+          "Feedback": "Everyone had a great time, and your employee's morale has increased!",
+          "sustainbilityPts": "0",
+          "moralePts": "15",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Invest money to buy solar panels on the rooftop",
+          "Feedback": "Installing solar panels is a cheaper and cleaner alternative for electricity!",
+          "sustainbilityPts": "180",
+          "moralePts": "0",
+          "incomePts": "5",
+          "costPts": "10"
+        },
+        {
+          "Option": "Upgrade existing machinery to a more carbon-friendly version",
+          "Feedback": "Despite the high costs of new machinery, upgrading our equipment would help contribute to the company's carbon neutral goal tremendously",
+          "sustainbilityPts": "250",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "20"
+        },
+        {
+          "Option": "Increase your salary",
+          "Feedback": "Word has started to spread among your company regarding your increase in salary. Your selfish act has caused the companys morale to plumet.",
+          "sustainbilityPts": "0",
+          "moralePts": "-15",
+          "incomePts": "-5",
+          "costPts": "10"
+        },
+        {
+          "Option": "Expand the business further by hiring new people and machinery",
+          "Feedback": "Expanding our business in an unsustainable manner will affect the company's long-term vision for sustainability.",
+          "sustainbilityPts": "180",
+          "moralePts": "0",
+          "incomePts": "10",
+          "costPts": "35"
+        },
+        {
+          "Option": "Do nothing",
+          "Feedback": "Your employees did not feel rewarded, and morale has dropped slightly.",
+          "sustainbilityPts": "0",
+          "moralePts": "-5",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "It is 22 April, AKA Earth Day! Your company decide to celebrate in the following way:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img3.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Encourage all employees to cycle or carpool to work",
+          "Feedback": "Cycling or carpooling is a good strategy to make our commute more sustainable as compared to public transport and personal vehicles.",
+          "sustainbilityPts": "180",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Offer only vegetarian lunch choices for a week at work",
+          "Feedback": "A vegetarian diet means 2.5x less carbon emissions. However, some employees are upset as they are now forced to eat vegetarian meals.",
+          "sustainbilityPts": "60",
+          "moralePts": "-5",
+          "incomePts": "0",
+          "costPts": "10"
+        },
+        {
+          "Option": "Organize a company beach cleanup",
+          "Feedback": "Not only are we keeping the beaches clean, but your employees are enjoying the company outing",
+          "sustainbilityPts": "180",
+          "moralePts": "10",
+          "incomePts": "0",
+          "costPts": "15"
+        },
+        {
+          "Option": "Give your employees an off day",
+          "Feedback": "Your employees are happy that they are given an off day!",
+          "sustainbilityPts": "0",
+          "moralePts": "10",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Educate your employees on the importance of sustainability",
+          "Feedback": "Educating your employees on sustainably can help promote a green culture mentality around the company.",
+          "sustainbilityPts": "60",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Do nothing",
+          "Feedback": "You decide to do nothing...",
+          "sustainbilityPts": "0",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "Some employees are complaining that we can do better to reduce wastage at work. You decided to:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img4.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Remove plastic cups at work and enforce Bring Your Own Bottle policy",
+          "Feedback": "Plastic cups are bad for the environment as they take up to 1000 years to break down! Enforcing BYOB policy is a sustainable practice that will help the environment",
+          "sustainbilityPts": "180",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "10"
+        },
+        {
+          "Option": "Encourage employees to avoid the use of disposable items and use reusable containers for lunch",
+          "Feedback": "Disposable items made of plastic don't biodegrade but break down into micro-particles that contaminate our environment. Encouraging the use of reusable containers is a sustainable practice that will help the environment",
+          "sustainbilityPts": "180",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "10"
+        },
+        {
+          "Option": "Send an email company-wide to focus on work productivity rather than wastage at work",
+          "Feedback": "You decide to do the worst thing imaginable. Your employees are outraged, and some are already resigning from the company!",
+          "sustainbilityPts": "0",
+          "moralePts": "-25",
+          "incomePts": "-5",
+          "costPts": "5"
+        },
+        {
+          "Option": "Install a color-coded recycling bin at work",
+          "Feedback": "Color-coded recycling bins can encourage and promote recycling at work",
+          "sustainbilityPts": "120",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "15"
+        },
+        {
+          "Option": "Place posters around the office that advocates for the importance of preventing wastage",
+          "Feedback": "Placing sustainability and climate posters around the office is a good way to educate and promote the importance of sustainability, but some employees find it annoying",
+          "sustainbilityPts": "60",
+          "moralePts": "-5",
+          "incomePts": "0",
+          "costPts": "1"
+        },
+        {
+          "Option": "Do nothing",
+          "Feedback": "You decided to do nothing to address your employee's complaints...",
+          "sustainbilityPts": "0",
+          "moralePts": "-15",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "An internal company sustainability report has found out that the distribution and logistics arm of the company can improve its sustainability practices. You decide to:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img5.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Change to electric delivery vehicles",
+          "Feedback": "Upgrading to electric delivery vehicles is costly, but they are a cleaner and cheaper alternative to petrol",
+          "sustainbilityPts": "320",
+          "moralePts": "0",
+          "incomePts": "4",
+          "costPts": "35"
+        },
+        {
+          "Option": "Use more sustainable material for packing goods for delivery",
+          "Feedback": "Large amounts of packaging produced today cannot be recycled in existing recycling systems. Upgrading to a sustainable packaging material promotes sustainability, even if costs more",
+          "sustainbilityPts": "250",
+          "moralePts": "0",
+          "incomePts": "-5",
+          "costPts": "25"
+        },
+        {
+          "Option": "Using route optimization for deliveries",
+          "Feedback": "Utilizing route optimization ensures effectiveness and efficiency, which in turn reduce overall carbon emission and cost from vehicles. Employees are also happy as they can now work more efficiently",
+          "sustainbilityPts": "250",
+          "moralePts": "5",
+          "incomePts": "5",
+          "costPts": "20"
+        },
+        {
+          "Option": "Start outsourcing other companies to perform our distribution and logistics needs",
+          "Feedback": "Outsourcing to other companies would prevent us from analyzing and encouraging sustainable practices within the supply chain. Some employees are also upset as they fear for their job safety",
+          "sustainbilityPts": "-220",
+          "moralePts": "-10",
+          "incomePts": "3",
+          "costPts": "15"
+        },
+        {
+          "Option": "Improve on existing logistics operation to be more efficient",
+          "Feedback": "Streamlining existing logistics operation ensure efficiency and effectiveness, which could prevent time, energy and material waste",
+          "sustainbilityPts": "60",
+          "moralePts": "5",
+          "incomePts": "2",
+          "costPts": "10"
+        },
+        {
+          "Option": "Ignore the report",
+          "Feedback": "You decided to ignore the report...",
+          "sustainbilityPts": "-120",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "Company stakeholders have a set goal to achieve a more sustainable supply chain within the next 5 years. You decide to:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img6.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Change suppliers that have more sustainable and eco-friendly policies, even though it could cost more",
+          "Feedback": "Changing to a sustainable and reputable supplier helps ensure sustainability within your company's supply chain, even if you have to reduce your profitability. Your customers and employees would be happy to learn that our products and services promote sustainbility practice",
+          "sustainbilityPts": "320",
+          "moralePts": "5",
+          "incomePts": "-10",
+          "costPts": "20"
+        },
+        {
+          "Option": "Encourage current suppliers to be more sustainably sourced",
+          "Feedback": "Communicating and working with existing suppliers to promote sustainability is a huge challenge. However, it could promote strong ties and relations with your supplier if they share the same goal.",
+          "sustainbilityPts": "180",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "10"
+        },
+        {
+          "Option": "Redesign products to minimize production complexity, reduce energy consumption and increase the product life span",
+          "Feedback": "Product redesign is an excellent way to ensure sustainable business practices in the long run. In the long run, the company could save more on manufacturing",
+          "sustainbilityPts": "320",
+          "moralePts": "0",
+          "incomePts": "5",
+          "costPts": "25"
+        },
+        {
+          "Option": "Invest in automation to start cutting down on manpower",
+          "Feedback": "Investing in automation helps to reduce waste and the company's carbon footprint. However, some employees would lose their jobs in the long run",
+          "sustainbilityPts": "250",
+          "moralePts": "-30",
+          "incomePts": "10",
+          "costPts": "35"
+        },
+        {
+          "Option": "Install more plants around the warehouse",
+          "Feedback": "Unfortunately, having more greenery around the warehouse contributes little to sustainability. On the bright side, your employees seem happier!",
+          "sustainbilityPts": "0",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Ignore the goal",
+          "Feedback": "You decided to ignore the goal set by your stakeholders...",
+          "sustainbilityPts": "0",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "Temperature has been rising considerably over the past few months, and so has the electricity bill due to the lower thermostat in the office. To combat this, you decide to:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img7.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Enforce the thermostat value so no one can change it",
+          "Feedback": "Enforcing thermostat temperature helps to save energy and money. But some employees are upset",
+          "sustainbilityPts": "60",
+          "moralePts": "-5",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Allow employees the freedom to set the value to be lower",
+          "Feedback": "Employees are happy, but we would be wasting energy and money",
+          "sustainbilityPts": "-50",
+          "moralePts": "5",
+          "incomePts": "-2",
+          "costPts": "5"
+        },
+        {
+          "Option": "Encourage employees to work from the convenience and comfort of their own home",
+          "Feedback": "Working from home reduces carbon emissions from business operations and transport. Employees are also happier and more productive when working from home!",
+          "sustainbilityPts": "180",
+          "moralePts": "10",
+          "incomePts": "2",
+          "costPts": "10"
+        },
+        {
+          "Option": "Turn off the air condition and only use standing fans",
+          "Feedback": "You might be saving energy and costs, but your employees deserve a decent working environment!",
+          "sustainbilityPts": "120",
+          "moralePts": "-15",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Upgrade to a more eco-friendly air conditioner",
+          "Feedback": "Upgrading to a more eco-friendly air conditioner helps reduce the companies carbon footprint",
+          "sustainbilityPts": "180",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "10"
+        },
+        {
+          "Option": "Implement nudist company policy",
+          "Feedback": "NUDIST POLICY? Some employees might be happy, but I think you belong in jail",
+          "sustainbilityPts": "0",
+          "moralePts": "-100",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "The illegal logging of endangered trees in Imaginationland has gone viral. The public is pressuring companies to stop using wood from endangered species such as teak, mahogany, and rosewood. As a company that uses these wood for manufacturing, you decide to:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img8.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Ignore the protests and continue with business operations",
+          "Feedback": "You decided to ignore the protests, but that affected the company's public image",
+          "sustainbilityPts": "-480",
+          "moralePts": "0",
+          "incomePts": "-15",
+          "costPts": "0"
+        },
+        {
+          "Option": "Release a statement stating the company is not going to change its business practices",
+          "Feedback": "Your statement has caused public outrage, and many are now avoiding your products and services",
+          "sustainbilityPts": "480",
+          "moralePts": "-20",
+          "incomePts": "-20",
+          "costPts": "1"
+        },
+        {
+          "Option": "Source for these wood from sustainable and reputable suppliers that replant trees",
+          "Feedback": "Finding sustainable wood suppliers ensures our product are sustainably sourced",
+          "sustainbilityPts": "280",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "25"
+        },
+        {
+          "Option": "Start using plywood",
+          "Feedback": "Plywood is cheaper but is of poor quality. It is still sustainably sourced",
+          "sustainbilityPts": "180",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Stop using wood entirely in your products",
+          "Feedback": "Finding alternative material for your products is extremely costly and will affect future sales",
+          "sustainbilityPts": "60",
+          "moralePts": "0",
+          "incomePts": "-15",
+          "costPts": "35"
+        },
+        {
+          "Option": "Close down your business entirely",
+          "Feedback": "You decide to close down your business... Game over?",
+          "sustainbilityPts": "0",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "A worldwide pandemic has started and has impacted businesses everywhere. To ensure continued green sustainability practices within the company during trying times, you decide to:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img9.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Gift every employee with reusable cloth masks",
+          "Feedback": "Reusable cloth masks is a more sustainable and more environmentally friendly alternative to a single-use face mask. Your employees appreciate the gift as well",
+          "sustainbilityPts": "60",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Obtain infrastructure to allow employees to work remotely from home",
+          "Feedback": "Working from home ensures the health and safety of employees. It also reduces carbon emissions from business operations and transport. Employees are also more happy and productive when working from home!",
+          "sustainbilityPts": "320",
+          "moralePts": "10",
+          "incomePts": "5",
+          "costPts": "15"
+        },
+        {
+          "Option": "Close business temporarily, and hope that pandemic will end soon",
+          "Feedback": "You decided to close the business... Unfortunately, just like COVID, it lasted several years...",
+          "sustainbilityPts": "0",
+          "moralePts": "-25",
+          "incomePts": "-15",
+          "costPts": "30"
+        },
+        {
+          "Option": "Do nothing",
+          "Feedback": "You decided to do nothing... As the pandemic worsens, your business operations were affected and were not able to adapt to the new business environment. Your business made a loss and morale plummets drastically",
+          "sustainbilityPts": "0",
+          "moralePts": "-25",
+          "incomePts": "-20",
+          "costPts": "0"
+        },
+        {
+          "Option": "Make a statement declaring the pandemic is fake",
+          "Feedback": "Unfortunately, the pandemic is as real as it gets. The public and the employee have lost faith in you and the company. On the other hand, you have gained a following of pseudointellectuals who believe in ridiculous conspiracies",
+          "sustainbilityPts": "0",
+          "moralePts": "-50",
+          "incomePts": "-20",
+          "costPts": "0"
+        },
+        {
+          "Option": "Redesign and optimize business operations during a pandemic",
+          "Feedback": "Analysing and tweaking business operations is ideal now that economic landscape has changed due to the pandemic",
+          "sustainbilityPts": "0",
+          "moralePts": "10",
+          "incomePts": "10",
+          "costPts": "10"
+        }
+      ]
+    },
+    {
+      "Question": "A new change in the government has led to a more aggressive push to achieve net zero carbon emission in the country. Facing pressure from the government, you decide to:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img10.jpg",
+      "isOpenEnded": "false",
+      "Options": [
+        {
+          "Option": "Relocate businesses elsewhere",
+          "Feedback": "Relocating your business to another country with fewer environmental regulations encourages the business to not practice sustainability. It will also be extremely costly to migrate the company to another location.",
+          "sustainbilityPts": "-320",
+          "moralePts": "0",
+          "incomePts": "-25",
+          "costPts": "50"
+        },
+        {
+          "Option": "Push a marketing campaign to highlight the company's green sustainable policy to improve the public image",
+          "Feedback": "Pushing a marketing campaign helps improve your business's public image, however, it does nothing to contribute to your company's sustainability goals",
+          "sustainbilityPts": "-180",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "10"
+        },
+        {
+          "Option": "Hang up posters around the office to educate employees on reducing wastage and promote recycling at work",
+          "Feedback": "Placing sustainability and climate posters around the office is a good way to educate and promote the importance of sustainability. But it doesn't do enough to meet the government's goal for net zero carbon emission",
+          "sustainbilityPts": "0",
+          "moralePts": "5",
+          "incomePts": "0",
+          "costPts": "5"
+        },
+        {
+          "Option": "Conduct a carbon assessment of your business to find ways to achieve net zero carbon emissions",
+          "Feedback": "Conducting carbon assessment is a great way for your business to start using more sustainable practices in the future",
+          "sustainbilityPts": "480",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "20"
+        },
+        {
+          "Option": "Dedicate more time and resources to more sustainability initiatives within the company",
+          "Feedback": "With more investment into internal sustainability policies, we ensure the company is aligned with the government's green goals",
+          "sustainbilityPts": "320",
+          "moralePts": "0",
+          "incomePts": "0",
+          "costPts": "15"
+        },
+        {
+          "Option": "Do nothing",
+          "Feedback": "You decide to do nothing, and the government decided to impose a hefty green tax on the company for your inactivity",
+          "sustainbilityPts": "-180",
+          "moralePts": "0",
+          "incomePts": "-20",
+          "costPts": "0"
+        }
+      ]
+    },
+    {
+      "Question": "Name 3 main causes of greenhouse gas emissions:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img11.jpg",
+      "isOpenEnded": "true",
+      "Options": [
+        {
+          "Option": "Electricity and Heat Production",
+          "Feedback": "The top causes of GHG emissions are Electricity and Heat Production, Agriculture and Land Use Changes, Industry, Transportation, Buildings, and Extraction/Processing of fossil fuels. Since the start of the Industrial Revolution and the advent of coal-powered steam engines, human activities have vastly increased the volume of greenhouse gases emitted into the atmosphere."
+        },
+        {
+          "Option": "Agriculture and Land Use Changes",
+          "Feedback": "null"
+        },
+        {
+          "Option": "Industry",
+          "Feedback": "null"
+        },
+        {
+          "Option": "Transportation",
+          "Feedback": "null"
+        },
+        {
+          "Option": "Buildings",
+          "Feedback": "null"
+        },
+        {
+          "Option": "Extraction/Processing of fossil fuels",
+          "Feedback": "null"
+        }
+      ]
+    },
+    {
+      "Question": "Name 3 countries that contribute the most to carbon emissions:",
+      "Image": "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/questions/img12.jpg",
+      "isOpenEnded": "true",
+      "Options": [
+        {
+          "Option": "China",
+          "Feedback": "The countries that contribute the most to carbon emissions are China, the US, India, Russia, Japan, and Germany. These countries won't be able to reach carbon neutrality only by reducing their domestic emissions.  They will need to offset much of their carbon footprint on international carbon markets."
+        },
+        {
+          "Option": "United States of America",
+          "Feedback": "null"
+        },
+        {
+          "Option": "India",
+          "Feedback": "null"
+        },
+        {
+          "Option": "Russia",
+          "Feedback": "null"
+        },
+        {
+          "Option": "Japan",
+          "Feedback": "null"
+        },
+        {
+          "Option": "Germany",
+          "Feedback": "null"
+        }
+      ]
+    }
+  ]
+}

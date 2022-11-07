@@ -1,0 +1,9 @@
+### submitting answer
+POST http://localhost:8080/api/4/answer
+Content-Type: application/json
+
+{
+    "answer": "Industry, Fossil Fuels, Building",
+    "isOpenEnded": true
+}
+###
