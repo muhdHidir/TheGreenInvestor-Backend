@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "currentstate")
