@@ -25,6 +25,7 @@ public class CarbonDataController {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "Bearer " + "2DA4NwXOsnGPMv4y6mw");
+        headers.add("user-agent", "Application");
 
         HttpEntity<String> request = new HttpEntity<String>(headers);
 
