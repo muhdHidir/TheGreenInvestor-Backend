@@ -2,12 +2,8 @@ package G2T6.G2T6.G2T6.services;
 
 import java.util.*;
 
-import G2T6.G2T6.G2T6.models.Option;
 import G2T6.G2T6.G2T6.models.Question;
-import G2T6.G2T6.G2T6.models.orders.OptionOrder;
 import G2T6.G2T6.G2T6.repository.QuestionRepository;
-import G2T6.G2T6.G2T6.services.order.OptionOrderService;
-import G2T6.G2T6.G2T6.services.order.QuestionOrderService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

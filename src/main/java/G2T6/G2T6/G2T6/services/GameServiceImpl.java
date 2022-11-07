@@ -150,15 +150,22 @@ public class GameServiceImpl implements GameService {
      * @param currentState the current state of the user
      */
     @Override
-    public void endGame(CurrentState currentState) {
+    public void endGame(CurrentState currentState, boolean isSave) {
         if (currentState.getGameStats() != null) {
             // save highscore
-            if (currentState.getGameStats().getTotalScore() > currentState.getUser().getHighScore()) {
+            if (isSave && (currentState.getGameStats().getTotalScore() > currentState.getUser().getHighScore())) {
                 currentState.getUser().setHighScore(currentState.getGameStats().getTotalScore());
                 userRepo.saveAndFlush(currentState.getUser());
             }
             // add one to total game count of user
             currentState.getUser().setGamesPlayed((currentState.getUser().getGamesPlayed() + 1));
+
+            // kill the score in the game stats
+            if (!isSave) {
+                currentState.getGameStats().setTotalScore(0.0);
+                gameStatsRepo.saveAndFlush(currentState.getGameStats());
+            }
+
         }
         // change the state to completed
         if (currentState.getCurrentState() != State.completed) {

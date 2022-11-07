@@ -136,7 +136,7 @@ public class GameController {
         setup();
 
         if (currentState.getCurrentState() != State.answering || currentState.getYearValue() >= 10) {
-            gameService.endGame(currentState);
+            gameService.endGame(currentState, true);
             return ResponseEntity.badRequest().body(new MessageResponse("Game has not started or Game has ended"));
         }
 
@@ -170,7 +170,7 @@ public class GameController {
             int currentEmissionVal = gameStats.getCurrentSustainabilityVal();
             int currentMoraleVal = gameStats.getCurrentMoraleVal();
 
-            //to find the correct index that matches the options order
+            // to find the correct index that matches the options order
             int idx = 0;
             for (int i = 0; i < currentState.getQuestionOrder().getIndexArray().size(); i++) {
                 if ((currentState.getQuestionOrder().getIndexArray().get(i) + 1) == question.getId().intValue()) {
@@ -191,7 +191,11 @@ public class GameController {
                     question.getArticle());
 
             if (currentState.checkIfGameShouldEnd()) {
-                gameService.endGame(currentState);
+                if (currentState.getYearValue() == 9) {
+                    gameService.endGame(currentState, true);
+                } else {
+                    gameService.endGame(currentState, false);
+                }
                 return ResponseEntity.ok(answerResponse);
             }
 
@@ -202,7 +206,7 @@ public class GameController {
         } catch (Exception e) {
 
             e.printStackTrace();
-            gameService.endGame(currentState);
+            gameService.endGame(currentState, false);
             return ResponseEntity.badRequest()
                     .body(new MessageResponse("Error: An error has occurred | game ended or wrong input"));
 

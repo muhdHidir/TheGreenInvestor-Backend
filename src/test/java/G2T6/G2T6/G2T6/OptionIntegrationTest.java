@@ -234,6 +234,18 @@ public class OptionIntegrationTest {
     }
 
     @Test
+    public void updateOption_invalidQuestionIsAdmin_Failure() throws Exception {
+        Question question = new Question("Question 1", "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/img11.jpg", true);
+        Option newOption = new Option("Option 2", "Trash Feedback", question, 0, 0, 0, 0);
+
+        URI uri = new URI(baseUrl + port + "/api/questions/404/options/1");
+        HttpHeaders headers = generateAuthAdmin();
+        ResponseEntity<Option> result = restTemplate.exchange(uri, HttpMethod.PUT, new HttpEntity<>(newOption, headers), Option.class);
+
+        assertEquals(404, result.getStatusCode().value());
+    }
+
+    @Test
     public void updateOption_validOptionNotAdmin_Failure() throws Exception {
         Question question = questions.save(new Question("Question 1", "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/img11.jpg", true));
         Option oldOption = options.save(new Option("Option 1", "Positive Feedback", question, 0, 0, 0, 0));
@@ -265,6 +277,17 @@ public class OptionIntegrationTest {
         Question question = questions.save(new Question("Question 1", "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/img11.jpg", true));
 
         URI uri = new URI(baseUrl + port + "/api/questions/" + question.getId() + "/options/404");
+        HttpHeaders headers = generateAuthAdmin();
+        ResponseEntity<Option> result = restTemplate.exchange(uri, HttpMethod.DELETE, new HttpEntity<>(headers), Option.class);
+
+        assertEquals(404, result.getStatusCode().value());
+    }
+
+    @Test
+    public void deleteOption_invalidQuestionIsAdmin_Failure() throws Exception {
+        Question question = questions.save(new Question("Question 1", "https://tgi-bucket.s3.ap-southeast-1.amazonaws.com/img11.jpg", true));
+
+        URI uri = new URI(baseUrl + port + "/api/questions/404" + question.getId() + "/options/1");
         HttpHeaders headers = generateAuthAdmin();
         ResponseEntity<Option> result = restTemplate.exchange(uri, HttpMethod.DELETE, new HttpEntity<>(headers), Option.class);
 

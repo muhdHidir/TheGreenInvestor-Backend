@@ -11,7 +11,7 @@ import G2T6.G2T6.G2T6.payload.response.GameResponse;
 public interface GameService {
     void initGame(CurrentState state);
     void nextQuestion(CurrentState currentState);
-    void endGame(CurrentState currentState);
+    void endGame(CurrentState currentState, boolean isSave);
     GameResponse getGameInfo(CurrentState state);
     GameResponse getEndGameInfo(CurrentState currentState);
     GameStats getAnsweredStats(CurrentState currentState, int answerIdx);

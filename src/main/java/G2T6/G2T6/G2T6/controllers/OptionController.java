@@ -59,16 +59,8 @@ public class OptionController {
     //Delete an Existing Option
     @DeleteMapping("/{questionId}/options/{optionId}")
     public void deleteOption(@PathVariable (value = "questionId") final Long questionId,
-            @PathVariable (value = "optionId") Long optionId) throws EmptyResultDataAccessException {
-        
+            @PathVariable (value = "optionId") Long optionId) throws QuestionNotFoundException, OptionNotFoundException {
         // attempt delete, throw OptionNotFoundException if delete fails
-        try{
-            optionService.deleteOption(questionId, optionId);
-        } catch(EmptyResultDataAccessException e) {
-            throw new OptionNotFoundException(optionId);
-        }
-
+        optionService.deleteOption(questionId, optionId);
     }
-
-    
 }
