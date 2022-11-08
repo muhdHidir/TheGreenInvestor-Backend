@@ -10,7 +10,10 @@ import javax.mail.internet.MimeMessage;
 import G2T6.G2T6.G2T6.models.Article;
 import G2T6.G2T6.G2T6.models.EmailTemplate;
 import G2T6.G2T6.G2T6.models.Option;
+import G2T6.G2T6.G2T6.repository.UserRepository;
 import G2T6.G2T6.G2T6.services.ArticleService;
+import G2T6.G2T6.G2T6.services.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
@@ -29,30 +32,39 @@ public class EmailService {
     @Autowired
     private ArticleService articleService;
 
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private UserService userService;
+
     @Value("yogesh.adhi.narayan@gmail.com, yanutron@gmail.com")
     private String attchEmailAddr;
-    //testing email Addresses
-    private String[] textEmailAddr = {"yogesh.adhi.narayan@gmail.com", "yanutron@gmail.com"};
+    // testing email Addresses
+    private String[] textEmailAddr = { "yogesh.adhi.narayan@gmail.com", "yanutron@gmail.com" };
+    private List<String> emailList;
     private int index = 0;
 
-    public void setIndex(int index){
+    public void setIndex(int index) {
         this.index = index;
     }
 
-
     public void sendTextEmail(EmailTemplate emailTemplate) throws MessagingException, IOException {
         List<Article> articles = articleService.listArticles();
+        emailList = userService.getEmailSubscribers();
+        // System.out.println(emailList);
         MimeMessage msg = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(msg, true);
         setIndex(index++);
         try {
-            int recipientSize = textEmailAddr.length;
-            for (int i = 0; i < recipientSize; i++) {
-
-                helper.setFrom(new InternetAddress("greeninvestor45@gmail.com", "Green Investor"));
-                helper.setTo(textEmailAddr[i]);
+            for (String email : emailList) {
+                // System.out.println(email);
+                helper.setFrom(new InternetAddress("greeninvestor8@gmail.com", "Green Investor"));
+                helper.setTo(email);
                 helper.setSubject("Weekly News");
-                helper.setText("<h1>" + "Here is your weekly news" + "</h1>" + "<br>" + "<p>" + articles.get(index).getBody() + "</p>" + "<br>" + "<p>" + articles.get(index).getArticle() + "</p>", true);
+                helper.setText(
+                        "<h1>" + "Here is your weekly news" + "</h1>" + "<br>" + "<p>" + articles.get(index).getBody()
+                                + "</p>" + "<br>" + "<p>" + articles.get(index).getArticle() + "</p>",
+                        true);
                 javaMailSender.send(msg);
             }
             index++;
@@ -72,6 +84,7 @@ public class EmailService {
                 String[] emails = attchEmailAddr.split(",");
                 int recipientSize = emails.length;
                 for (int i = 0; i < recipientSize; i++) {
+                    helper.setFrom(new InternetAddress("greeninvestor8@gmail.com", "Green Investor"));
                     helper.setTo(emails[i]);
                     helper.setSubject("Attachment File !");
                     helper.setText("<h1>" + "Find the Attachment file" + "</h1>", true);
@@ -82,6 +95,7 @@ public class EmailService {
                 }
 
             } else {
+                helper.setFrom(new InternetAddress("greeninvestor8@gmail.com", "Green Investor"));
                 helper.setTo(attchEmailAddr);
                 helper.setSubject("Attachment File !");
                 // default = text/plain

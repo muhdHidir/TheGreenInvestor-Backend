@@ -24,7 +24,7 @@ public class EmailScheduler {
 
    @Scheduled(cron = "0 0 1 * * MON")
     //Test
-    //@Scheduled(fixedRate = 60000, initialDelay = 1000)
+    // @Scheduled(fixedRate = 60000, initialDelay = 20000)
     public void sendingEmail() {
         log.info("The email is sent at {}", dateFormat.format(new Date()));
 

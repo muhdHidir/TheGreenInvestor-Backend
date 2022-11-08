@@ -74,18 +74,6 @@ public class StateServiceImplementation implements StateService {
     @Override
     public void deleteCurrentState(final Long id) { stateRepository.deleteById(id); }
 
-    /**
-     * Reset all state value
-     * @param id a Long value
-     */
-    @Override
-    public void factoryReset(final Long id) {
-        stateRepository.findById(id).map(newState -> {
-            newState.changeState(CONSTANTVARIABLES.DEFAULTSTATE);
-            newState.setYearValue(CONSTANTVARIABLES.DEFAULTYEAR);
-            return stateRepository.save(newState);
-        });
-    }
 
     /**
      * Get a default state

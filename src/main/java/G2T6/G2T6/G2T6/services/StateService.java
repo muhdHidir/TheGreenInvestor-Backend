@@ -12,7 +12,6 @@ public interface StateService {
     CurrentState addCurrentState(CurrentState state);
     CurrentState updateCurrentState(Long id, CurrentState state);
     void deleteCurrentState(Long id);
-    void factoryReset(Long id);
     CurrentState getDefaultState(); //get default state
     List<CurrentState> listCurrentStateByUserId(Long userId);
     Optional<CurrentState> getStateByIdAndUserId(Long id, Long userId);

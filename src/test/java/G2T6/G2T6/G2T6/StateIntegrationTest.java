@@ -60,6 +60,7 @@ public class StateIntegrationTest {
         regularUser = userRepo.save(new User("ckasdasd123", "ck123@gmail.com", "Password1232", "GUEST"));
     }
 
+
      @Test
      public void getState_Success() throws Exception {
          URI uri = new URI(baseUrl + port + "/api/states");
@@ -73,60 +74,59 @@ public class StateIntegrationTest {
 
      }
 
-    //  @Test
-    //  public void getUserState_ValidUser_Success() throws Exception{
-    //      List<CurrentState> ckStates = new ArrayList<>();
-    //      CurrentState currentState01 = new CurrentState( regularUser, 0, State.start, 0, "");
-    //      CurrentState currentState02 = new CurrentState( regularUser, 0, State.completed, 0, "");
-    //      ckStates.add(currentState01);
-    //      ckStates.add(currentState02);
+      @Test
+      public void getUserState_ValidUser_Success() throws Exception{
+          List<CurrentState> ckStates = new ArrayList<>();
+          CurrentState currentState01 = new CurrentState(CONSTANTVARIABLES.DEFAULTYEAR, State.completed, regularUser);
+          CurrentState currentState02 = new CurrentState(CONSTANTVARIABLES.DEFAULTYEAR, CONSTANTVARIABLES.DEFAULTSTATE, regularUser);
+          ckStates.add(currentState01);
+          ckStates.add(currentState02);
 
 
-    //      List<GameStats> ckStats = new ArrayList<>();
-    //      GameStats stats01 = new GameStats(0, 0, 0, regularUser, currentState01);
-    //      ckStats.add(stats01);
+          List<GameStats> ckStats = new ArrayList<>();
+          GameStats stats01 = new GameStats(0, 0, 0, regularUser, currentState01);
+          ckStats.add(stats01);
 
-    //      currentState01.setGameStats(stats01);
+          currentState01.setGameStats(stats01);
 
-    //      regularUser.setCurrentState(ckStates);
-    //      regularUser.setGameStats(ckStats);
+          regularUser.setCurrentState(ckStates);
+          regularUser.setGameStats(ckStats);
 
-    //      stateRepo.save(currentState01);
-    //      stateRepo.save(currentState02);
+          stateRepo.save(currentState01);
+          stateRepo.save(currentState02);
 
-    //      gameStatsRepo.save(stats01);
+          gameStatsRepo.save(stats01);
 
-    //      URI uri = new URI(baseUrl + port + "/api/id/" + regularUser.getId() + "/states");
-    //      ResponseEntity<CurrentState[]> result = restTemplate.getForEntity(uri, CurrentState[].class);
-    //      CurrentState[] results = result.getBody();
-    //      assertEquals(200, result.getStatusCode().value());
-    //      assertEquals(2, results.length);
-    //      assertEquals(0, results[0].getYearValue());
-    //      assertEquals(State.completed, results[1].getCurrentState());
-    // }
+          URI uri = new URI(baseUrl + port + "/api/id/" + regularUser.getId() + "/states");
+          ResponseEntity<CurrentState[]> result = restTemplate.getForEntity(uri, CurrentState[].class);
+          CurrentState[] results = result.getBody();
+          assertEquals(200, result.getStatusCode().value());
+          assertEquals(2, results.length);
+          assertEquals(0, results[0].getYearValue());
+     }
 
-    // @Test
-    // public void getUserState_InvalidUser_Failure() throws Exception{
-    //     List<CurrentState> ckStates = new ArrayList<>();
-    //     CurrentState currentState01 = new CurrentState( regularUser, 0, State.start, 0, "");
-    //     ckStates.add(currentState01);
+     @Test
+     public void getUserState_InvalidUser_Failure() throws Exception{
+         List<CurrentState> ckStates = new ArrayList<>();
+         CurrentState currentState01 = new CurrentState(CONSTANTVARIABLES.DEFAULTYEAR, CONSTANTVARIABLES.DEFAULTSTATE, regularUser);
+         ckStates.add(currentState01);
 
-    //     List<GameStats> ckStats = new ArrayList<>();
-    //     GameStats stats01 = new GameStats(0, 0, 0, regularUser, currentState01);
-    //     ckStats.add(stats01);
+         List<GameStats> ckStats = new ArrayList<>();
+         GameStats stats01 = new GameStats(0, 0, 0, regularUser, currentState01);
+         ckStats.add(stats01);
 
-    //     currentState01.setGameStats(stats01);
+         currentState01.setGameStats(stats01);
 
-    //     regularUser.setCurrentState(ckStates);
-    //     regularUser.setGameStats(ckStats);
+         regularUser.setCurrentState(ckStates);
+         regularUser.setGameStats(ckStats);
 
-    //     stateRepo.save(currentState01);
+         stateRepo.save(currentState01);
 
-    //     URI uri = new URI(baseUrl + port + "/api/id/" + regularUser.getId()+100 + "/states");
-    //     ResponseEntity<CurrentState> result = restTemplate.getForEntity(uri, CurrentState.class);
+         URI uri = new URI(baseUrl + port + "/api/id/" + regularUser.getId()+100 + "/states");
+         ResponseEntity<CurrentState> result = restTemplate.getForEntity(uri, CurrentState.class);
 
-    //     assertEquals(404, result.getStatusCode().value());
-    // }
+         assertEquals(404, result.getStatusCode().value());
+     }
 
     @Test
     public void getState_ValidUserAndId_Success() throws Exception {

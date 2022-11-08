@@ -117,10 +117,12 @@ public class AuthController {
     if (strRole.equals("GUEST")) {
 
       user.setRole("ROLE_GUEST");
+      user.setSubscribedEmail(false);
 
     } else if (strRole.equals("USER")) {
 
       user.setRole("ROLE_USER");
+      user.setSubscribedEmail(true);
 
     } else {
 
