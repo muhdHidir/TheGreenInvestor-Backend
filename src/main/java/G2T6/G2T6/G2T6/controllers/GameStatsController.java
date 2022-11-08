@@ -117,7 +117,8 @@ public class GameStatsController {
     public List<GameStats> removeZeroOrLowerScoreGameStats(List<GameStats> gameStats){
         List<GameStats> nonZeroTotal = new ArrayList<>();
         for(GameStats gs: gameStats){
-            if(gs.getTotal() > 0){
+            Integer comparingVal = (int)Math.max(gs.getTotal(), 0);
+            if(comparingVal != 0){
                 nonZeroTotal.add(gs);
             }
         }
